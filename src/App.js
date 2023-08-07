@@ -14,6 +14,7 @@ function App() {
       <p class="d-inline-flex gap-1">
       <SignIn/>
       <SignUp/>
+      {/* hi */}
       </p>
       <br/><br/><Contact/>
       </div>
