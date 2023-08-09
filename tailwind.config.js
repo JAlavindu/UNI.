@@ -7,6 +7,8 @@ export default {
       white: "#ffffff",
       "light-blue": "#DFEAF7",
       "gray-F3F2EF": "#F3F2EF",
+      "gray-858EAD": "#858EAD",
+      "gray-424242": "#424242",
     },
     extend: {},
   },
