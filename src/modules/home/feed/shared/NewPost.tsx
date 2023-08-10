@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
-import { Avatar } from "../common/Avatar";
-import PollsIcon from "./assets/polls_icon.svg";
-import PostIcon from "./assets/post_icon.svg";
+import { Avatar } from "../../shared/Avatar";
+import PollsIcon from "../assets/polls_icon.svg";
+import PostIcon from "../assets/post_icon.svg";
 
 const Button: FC<{ children: string; onClick: () => void; icon: string }> = ({
   icon,

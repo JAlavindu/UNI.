@@ -1,6 +1,12 @@
 import { FC } from "react";
-import { Avatar } from "../common/Avatar";
+import { Avatar } from "../../../shared/Avatar";
 import { Link } from "react-router-dom";
+import heartIcon from "../../assets/heart_icon.svg";
+import shareIcon from "../../assets/share_icon.svg";
+import starIcon from "../../assets/star_icon.svg";
+import { IconButton } from "./IconButton";
+import { UpvoteDownvote } from "./UpvoteDownvote";
+import { Comments } from "./comments";
 
 export const Post: FC = () => {
   return (
@@ -8,7 +14,7 @@ export const Post: FC = () => {
       <div className="flex flex-col p-[20px]">
         <div className="flex items-start">
           <Avatar isLink size={52} />
-          <div className="flex-col w-[calc(100%-52px-20px-220px)] ml-[10px] md:flex hidden">
+          <div className="flex-col w-[calc(100%-52px-20px-220px)] ml-[10px] md:flex hidden items-start">
             <Link to={"/profile"} className="hover:underline">
               <h4 className="text-[16px] leading-[16px]">
                 Geethika Isuru Sampath
@@ -43,6 +49,17 @@ export const Post: FC = () => {
         </p>
       </div>
       <div className="h-[400px] bg-black"></div>
+      <div className="flex items-center md:flex-row flex-col justify-between p-[20px]">
+        <div className="flex space-x-[14px]">
+          <IconButton icon={heartIcon}>Love</IconButton>
+          <UpvoteDownvote />
+        </div>
+        <div className="flex space-x-[10px] md:mt-0 mt-[10px]">
+          <IconButton icon={shareIcon}>Share</IconButton>
+          <IconButton icon={starIcon}>Star</IconButton>
+        </div>
+      </div>
+      <Comments />
     </article>
   );
 };

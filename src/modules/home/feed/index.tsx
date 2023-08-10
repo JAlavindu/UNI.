@@ -1,14 +1,14 @@
 import { FC } from "react";
-import { Sidebar } from "./Sidebar";
-import { NewPost } from "./NewPost";
-import { Post } from "./Post";
+import { Sidebar } from "./shared/sidebar";
+import { NewPost } from "./shared/NewPost";
+import { Post } from "./shared/post";
 
 export const FeedPage: FC = () => {
   return (
-    <div className="bg-gray-F3F2EF min-h-screen flex">
+    <div className="bg-gray-F3F2EF min-h-screen grid lg:grid-cols-12">
       {/* Side bar */}
       <Sidebar />
-      <div className="lg:max-w-[600px] xl:max-w-[800px] w-full flex flex-col lg:ml-[56px] bg-light-blue p-[20px] space-y-[56px]">
+      <div className="w-full flex flex-col lg:ml-[56px] p-[20px] space-y-[56px] lg:col-span-7 xl:col-span-5 lg:col-start-5 xl:col-start-4">
         <NewPost />
         <Post />
         <Post />
